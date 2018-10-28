@@ -13,6 +13,7 @@ object Frm_pizzaria: TFrm_pizzaria
   Menu = MainMenu1
   OldCreateOrder = False
   Position = poMainFormCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object MainMenu1: TMainMenu

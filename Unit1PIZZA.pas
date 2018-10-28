@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus;
+  Dialogs, dbconfiguracao, Menus;
 
 type
   TFrm_pizzaria = class(TForm)
@@ -21,6 +21,7 @@ type
     procedure Sair1Click(Sender: TObject);
     procedure Clientes1Click(Sender: TObject);
     procedure Pedidos1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,6 +40,55 @@ uses sisconfigura, cadaitem, cadaclitentes, cadapedidos;
 procedure TFrm_pizzaria.Configurao1Click(Sender: TObject);
 begin
      frm_empresa.ShowModal;
+end;
+
+procedure TFrm_pizzaria.FormShow(Sender: TObject);
+begin
+
+
+   // abrir a conexao com o Banco de dados
+
+   if conectar() then
+
+      begin
+
+       showmessage ('Conexão bem sucedida ');
+
+      end
+
+    else
+
+     begin
+
+       showmessage ('Não foi possível a conexão');
+
+       Frm_pizzaria.Close;
+
+     end;
+     
+
+     //  Abrir as tabelas
+
+      if AbrirBancosDados() then
+
+      begin
+
+       showmessage ('Conexão bem sucedida ');
+
+      end
+
+    else
+
+     begin
+
+       showmessage ('Não foi possível a conexão');
+
+       Frm_pizzaria.Close;
+
+     end;
+
+
+
 end;
 
 procedure TFrm_pizzaria.Itens1Click(Sender: TObject);

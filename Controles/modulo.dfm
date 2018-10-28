@@ -3,17 +3,6 @@ object dmodulo: Tdmodulo
   Height = 425
   Width = 522
   object Conexao: TADOConnection
-    ConnectionString = 
-      'Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Pr' +
-      'ojetos\pizzaria\DB\notas.mdb;Mode=Share Deny None;Persist Securi' +
-      'ty Info=False;Jet OLEDB:System database="";Jet OLEDB:Registry Pa' +
-      'th="";Jet OLEDB:Database Password="";Jet OLEDB:Engine Type=5;Jet' +
-      ' OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops' +
-      '=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database P' +
-      'assword="";Jet OLEDB:Create System Database=False;Jet OLEDB:Encr' +
-      'ypt Database=False;Jet OLEDB:Don'#39't Copy Locale on Compact=False;' +
-      'Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=Fal' +
-      'se'
     LoginPrompt = False
     Provider = 'Microsoft.Jet.OLEDB.4.0'
     Left = 48

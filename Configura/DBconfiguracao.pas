@@ -19,11 +19,14 @@ uses sysutils, inifiles, Messages, Dialogs, modulo;
  Function lerEndereco  : string;
  Function Conectar     : boolean;
  Function DesConectar  : boolean;
+ Function FecharBancosDados : boolean;
+ Function AbrirBancosDados : boolean;
 
 implementation
 
 {***********************************************
  *  Ler arquivo de configuraçao de DB
+ *  Modificado em 28 de outubro de 2018. 
  ********************************************************}
 
 Function lerNomeBanco  : string;
@@ -56,6 +59,7 @@ end;
 
 {***********************************************
  *  Ler arquivo de endereco do host do DB
+ *  Modificado em 28 de outubro de 2018. 
  ********************************************************}
 
 Function lerEndereco  : string;
@@ -148,6 +152,7 @@ end;
  {***********************************************
   *  DesConectar com o banco de dados cadastrado
   *	 
+  *  Modificado em 28 de outubro de 2018. 
   *
   ********************************************************} 
  
@@ -161,4 +166,64 @@ begin
 end;
  
  
+ 
+ {***********************************************
+  * Abrir os bancos de dados 
+  *
+  ********************************************************}
+  
+
+ Function AbrirBancosDados : boolean;
+ begin
+
+   try
+   
+    dmodulo.tabempresa.open;
+   
+	   
+		result := true  ;
+	       
+		
+	except
+
+		result := false;
+
+    exit  ;
+
+   end;
+
+      
+ end;
+
+ 
+ {***********************************************
+  * Fechar os bancos de dados 
+  *
+  ********************************************************}
+ 
+ Function FecharBancosDados : boolean;
+ begin
+
+   try
+   
+    dmodulo.tabempresa.close;
+   
+	   
+		result := true ;
+	       
+		
+	except
+
+		result := false;
+
+    exit ;
+
+   end;
+
+      
+ end;
+
+ 
+ 
+// final da unit 
 end.

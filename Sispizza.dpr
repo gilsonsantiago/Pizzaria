@@ -11,7 +11,8 @@ uses
   lnclusaoclientes in 'Telas\lnclusaoclientes.pas' {incluir_clientes},
   modulo in 'Controles\modulo.pas' {dmodulo: TDataModule},
   sisconfigura in 'Controles\sisconfigura.pas' {Frm_empresa},
-  criamcompetencia in 'Controles\criamcompetencia.pas' {anomes};
+  criamcompetencia in 'Controles\criamcompetencia.pas' {anomes},
+  DBconfiguracao in 'Configura\DBconfiguracao.pas';
 
 {$R *.res}
 
