@@ -2,8 +2,8 @@ object Frm_pizzaria: TFrm_pizzaria
   Left = 277
   Top = 124
   Caption = 'Frm_pizzaria'
-  ClientHeight = 438
-  ClientWidth = 617
+  ClientHeight = 419
+  ClientWidth = 711
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
